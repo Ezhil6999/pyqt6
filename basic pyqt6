@@ -1,0 +1,57 @@
+from PyQt6.QtWidgets import QApplication, QWidget;
+import sys
+from PyQt6.QtGui import QIcon
+
+
+class Windows(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("HI My Name is EZHIL")
+        self.setWindowIcon(QIcon("Ezhil.JPG"))
+        # self.setFixedHeight(200)
+        # self.setFixedWidth(200)
+        # self.setGeometry(500,300,400,300)
+        # self.setStyleSheet('background-color:gray')
+
+        # stylesheet = ('background-color:black')
+        # self.setStyleSheet(stylesheet)
+
+        
+
+
+
+app = QApplication(sys.argv)
+window = Windows()
+window.show()
+sys.exit(app.exec())
+
+111111111111111111111111111111111111111111111111111111111111111111
+
+import sys
+from PyQt6.QtCore import QSize,Qt
+from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QApplication,QMainWindow,QPushButton
+class first(QMainWindow):
+    def _init_(self):
+        super()._init_()
+        self.setWindowTitle("my APP")
+        self.setWindowIcon(QIcon("download.jfif"))
+        self.button=QPushButton("click it!")
+        self.setCentralWidget(self.button)
+        self.button.clicked.connect(self.btnHide)
+        #self.setMaximumSize(1000,1000)
+        self.setMinimumSize(50,50)
+        # self.setFixedSize(QSize(100,300))
+    def btnHide(self):
+        #seft.button.setHidden(True)
+        self.btn2=QPushButton("I am new one")
+        self.setCentralWidget(self.btn2)
+        self.btn2.clicked.connect(self.win_icon)
+    def win_icon(self):
+        self.setWindowIcon(QIcon("tiger.jfif"))
+app=QApplication(sys.argv)
+window=first()
+window.show()
+app.exec()
+
+222222222222222222222222222222222222222222222222222222222222222222222222222222222222
